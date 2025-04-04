@@ -4,15 +4,16 @@ block content
   h1= title
   p Below are some aura search results:
 
-  // Step 2 & 3: Bootstrap grid structure
   .container-fluid
     .row
       each aura in results
-        .col-sm-3.border.p-2
-          h3= aura.color
-          p Intensity: #{aura.intensity}
-          p Emotion: #{aura.emotion_associated}
+        .col-sm-3.mb-4
+          .card.shadow-sm.border
+            .card-body
+              h5.card-title= aura.color
+              p.card-text Intensity: #{aura.intensity}
+              p.card-text Emotion: #{aura.emotion_associated}
 
-  // Step 8: Add a hyperlink back to the home page
-  p
+  p.mt-4
     a(href="/") Back to Home
+
