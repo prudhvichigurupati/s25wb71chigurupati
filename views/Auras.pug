@@ -4,11 +4,11 @@ block content
   h1= title
   p Below are some aura search results:
 
-  .container-fluid
+  .container
     .row
       each aura in results
-        .col-sm-3.mb-4
-          .card.shadow-sm.border
+        .col-md-4.mb-4
+          .card.border.shadow-sm
             .card-body
               h5.card-title= aura.color
               p.card-text Intensity: #{aura.intensity}
@@ -16,4 +16,3 @@ block content
 
   p.mt-4
     a(href="/") Back to Home
-
