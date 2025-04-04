@@ -14,10 +14,11 @@ block content
   .container-fluid
     .row
       each aura in results
-        .col-sm-3.border.p-2
-          h3 #{aura.color}
-          p Intensity: #{aura.intensity}
-          p Emotion: #{aura.emotion_associated}
+        .col-sm-3.mb-4
+          .border.p-2
+            h3 #{aura.color}
+            p Intensity: #{aura.intensity}
+            p Emotion: #{aura.emotion_associated}
 
   p
     a(href="/") Back to Home
