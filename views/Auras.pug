@@ -4,15 +4,20 @@ block content
   h1= title
   p Below are some aura search results:
 
-  .container
+  -
+    let results = [
+      { color: "Indigo", intensity: 8, emotion_associated: "Clarity" },
+      { color: "Green", intensity: 6, emotion_associated: "Calm" },
+      { color: "Red", intensity: 9, emotion_associated: "Passion" }
+    ];
+
+  .container-fluid
     .row
       each aura in results
-        .col-md-4.mb-4
-          .card.border.shadow-sm
-            .card-body
-              h5.card-title= aura.color
-              p.card-text Intensity: #{aura.intensity}
-              p.card-text Emotion: #{aura.emotion_associated}
+        .col-sm-3.border.p-2
+          h3 #{aura.color}
+          p Intensity: #{aura.intensity}
+          p Emotion: #{aura.emotion_associated}
 
-  p.mt-4
+  p
     a(href="/") Back to Home
